@@ -1,0 +1,25 @@
+mongodb-dev:
+  image: mongo
+  volumes:
+    - /data/db:/data/db
+  ports:
+    - '27017:27017'
+
+backend-dev:
+  build: .
+  volumes:
+    - .:/usr/src/app
+  links:
+    - mongodb-dev
+  ports:
+    - '3030:3030'
+    - '9229:9229'
+
+cra-dev:
+  build: frontend
+  volumes:
+    - ./frontend:/usr/src/app
+  links:
+    - feathers-dev
+  ports:
+    - '3000:3000'
