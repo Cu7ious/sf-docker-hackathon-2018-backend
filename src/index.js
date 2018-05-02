@@ -4,7 +4,6 @@ const server = require('http').createServer()
 const io = require('socket.io')(server, {})
 const models = require('models')
 const uniqid = require('uniqid')
-const IOevents = require('io-events')
 
 clientsList = {
         "0": "Cu7ious",
