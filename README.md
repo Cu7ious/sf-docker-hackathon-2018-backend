@@ -10,7 +10,6 @@
 2. Install your dependencies
 
     ```
-    cd path/to/-authority
     ./install.sh
 
     ```
