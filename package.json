@@ -1,0 +1,32 @@
+{
+  "name": "daily-board-server",
+  "description": "Socket.io based backend for RedditReader",
+  "version": "0.0.0",
+  "homepage": "",
+  "main": "src",
+  "keywords": [],
+  "author": {
+    "name": "Cu7ious",
+    "email": "garkusha.sergiy@gmail.com"
+  },
+  "scripts": {
+    "eslint": "eslint src/. --config .eslintrc.json",
+    "start": "NODE_PATH=src/ nodemon src/"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "frontend/*"
+    ]
+  },
+  "dependencies": {
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.13.5",
+    "react-beautiful-dnd": "^7.1.0",
+    "socket.io": "^2.0.4",
+    "uniqid": "^4.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.11.0",
+    "nodemon": "^1.12.1"
+  }
+}
